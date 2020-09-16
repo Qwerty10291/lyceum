@@ -19,8 +19,16 @@ class Bell:
 
 
 class LittleBell(Bell):
-    pass
+    bell = 'ding'
+
+    def sound(self):
+        print(self.bell)
 
 
 class BigBell(Bell):
-    pass
+    bell = ['ding', 'dong']
+    flag = False
+
+    def sound(self):
+        print(self.bell[int(self.flag)])
+        self.flag = ~self.flag
